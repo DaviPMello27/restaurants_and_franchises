@@ -14,13 +14,15 @@ import com.example.entities.Franchise;
 import com.example.entities.Restaurant;
 import com.example.list_helper.CardHelper;
 
+import java.util.Objects;
+
 public class RestaurantList extends AppCompatActivity {
     private Restaurant[] restaurantList = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getSupportActionBar().setTitle(this.getText(R.string.title_restaurantes));
+        Objects.requireNonNull(this.getSupportActionBar()).setTitle(this.getText(R.string.title_restaurantes));
         setContentView(R.layout.activity_restaurant_list);
 
         final String franchiseName = this.getIntent().getStringExtra("FRANCHISE_NAME");

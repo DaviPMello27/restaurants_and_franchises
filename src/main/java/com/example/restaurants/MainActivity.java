@@ -22,19 +22,15 @@ import android.widget.LinearLayout.LayoutParams;
 import com.example.entities.Franchise;
 import com.example.list_helper.CardHelper;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
     private Franchise[] franchiseList = Franchise.sampleFranchises;
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
-        return super.onCreateView(name, context, attrs);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getSupportActionBar().setTitle(this.getText(R.string.title_franchises));
+        Objects.requireNonNull(this.getSupportActionBar()).setTitle(this.getText(R.string.title_franchises));
         setContentView(R.layout.activity_main);
         this.createFranchiseCards();
     }
