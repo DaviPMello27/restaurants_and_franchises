@@ -4,13 +4,13 @@ public class Restaurant {
     public String name;
     public String address;
     public String city;
-    public Object image;
+    public int image;
 
     public Restaurant(
             String name,
             String address,
             String city,
-            Object image
+            int image
     ){
         this.name = name;
         this.address = address;

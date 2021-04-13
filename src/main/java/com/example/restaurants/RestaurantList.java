@@ -61,7 +61,7 @@ public class RestaurantList extends AppCompatActivity {
             textLayout.addView(CardHelper.createCardSubtitle(this.restaurantList[i].city, textLayout.getContext()));
             textLayout.addView(CardHelper.createCardText(this.restaurantList[i].address, textLayout.getContext()));
 
-            ImageView image = this.createCardImage(R.drawable.sample);
+            ImageView image = this.createCardImage(this.restaurantList[i].image);
 
             card.addView(image);
             card.addView(textLayout);
