@@ -1,14 +1,14 @@
 package com.example.entities;
 
-import java.util.ArrayList;
+import com.example.restaurants.R;
 
 public class Franchise {
     public String name;
     public String description;
-    public Object image;
+    public int image;
     public Restaurant[] restaurants;
 
-    public Franchise(String name, String description, Object image, Restaurant[] restaurants){
+    public Franchise(String name, String description, int image, Restaurant[] restaurants){
         this.name = name;
         this.description = description;
         this.image = image;
@@ -19,7 +19,7 @@ public class Franchise {
             new Franchise(
                     "McDonaldo",
                     "Vendemos apenas sanduíches de microondas.",
-                    null,
+                    R.drawable.mcdonaldo,
                     new Restaurant[]{
                             new Restaurant(
                                     "McDonaldo Super, temos dois microondas!",
@@ -44,19 +44,19 @@ public class Franchise {
             new Franchise(
                     "Burger Prince",
                     "Temos sanduíches de microondas um pouco melhores que os do McDonaldo.",
-                    null,
+                    R.drawable.burger_prince,
                     new Restaurant[]{}
             ),
             new Franchise(
                     "Superway",
                     "Pra que comer sanduíche de microondas quando você pode fazer o próprio sanduíche de 30 metros?",
-                    null,
+                    R.drawable.superway,
                     new Restaurant[]{}
             ),
             new Franchise(
                     "Dominós",
                     "Aqui as suas calorias vão ser tão baixas quanto a minha habilidade de jogar dominó.",
-                    null,
+                    R.drawable.dominos,
                     new Restaurant[]{}
             ),
     };

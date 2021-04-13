@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             textLayout.addView(CardHelper.createCardTitle(this.franchiseList[i].name, textLayout.getContext()));
             textLayout.addView(CardHelper.createCardText(this.franchiseList[i].description, textLayout.getContext()));
 
-            ImageView image = this.createCardImage(R.drawable.sample);
+            ImageView image = this.createCardImage(this.franchiseList[i].image);
             int onClickI = i;
             image.setOnClickListener(new OnClickListener() {
                 @Override
